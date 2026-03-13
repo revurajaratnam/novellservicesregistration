@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Novell Services</title>
+</head>
+<style>
+    *{
+        align-content: center;
+        align-items: center;
+    }
+    table{
+        border-collapse: collapse;
+        
+    }
+    .labcol{ border:0.2px solid rgb(7, 111, 152); }
+    input[type="radio"],input[type="checkbox"],select{
+        border:5px solid rgb(7, 111, 152);
+        
+    }
+    #al1{margin-left: 150px;}
+    
+
+    
+</style>
+<body>
+<h2>Novell Services Login</h2>
+<table>
+    <form action="https://b2b.novellglobal.com/index.php?route=account/login">
+        <tr>
+           <td><label>Username:</label> </td>
+            <td><input type="text" name="username" class="labcol" required></td>
+        </tr>
+        <tr>
+           <td> <label>Password:</label></td>
+            <td><input type="password" name="password" class="labcol" required></td>
+        </tr>
+        <tr>
+           <td> <label>City </label></td>
+           <td><input type="text" name="place" class="labcol" required></td> 
+        </tr>
+        <tr>
+           <td><label>Web Server</label></td> 
+            <td> <select class="labcol">
+                <option >--Choose a server</option>
+                <option>Server 1</option>
+                <option>Server 2</option>
+                <option>Server 3</option>
+            </select></td> 
+        </tr>
+        <tr>
+            <td rowspan="4"><label>Please Specify youre role:</label></td>
+            <td><input type="radio" name="role" class="labcol" required>Admin</td></tr>
+        <tr>
+            <td><input type="radio" name="role" class="labcol" required>Engineer</td></tr>
+        <tr>
+            <td><input type="radio" name="role" class="labcol" required>Manager</td></tr>
+        <tr>
+            <td><input type="radio" name="role" class="labcol" required>Guest</td></tr>
+        <tr>
+            <td rowspan="3"><label>Single Sign-on to the following</label></td>
+            <td><input type="checkbox" class="labcol">Mail</td>
+        </tr>
+        <tr><td><input type="checkbox" class="labcol">Pay-Roll</td></tr>
+        <tr><td><input type="checkbox" class="labcol">Self-Service</td></tr>
+        <tr>
+        <td><button id="al1" type="submit" class="labcol">Login</button></td>
+        <td><button id="al2" type="reset" class="labcol">Reset</button></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>
