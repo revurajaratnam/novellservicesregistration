@@ -7,34 +7,55 @@
     <title>Novell Services</title>
 </head>
 <style>
-    *{
-        align-content: center;
-        align-items: center;
-    }
-    table{
-        border-collapse: collapse;
-        
-    }
-    .labcol{ border:0.2px solid rgb(7, 111, 152); }
-    input[type="radio"],input[type="checkbox"],select{
-        border:5px solid rgb(7, 111, 152);
-        
-    }
-    #al1{margin-left: 150px;}
-    
+   
+body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px; 
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.full-width {
+    grid-column: span 2;
+    text-align: center;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid rgb(7, 111, 152);
+}
     
 </style>
 <body>
-<h2>Novell Services Login</h2>
-<table>
+    <div class="container">
     <form action="https://b2b.novellglobal.com/index.php?route=account/login">
+        <h2>Novell Services Login</h2>
+        <table>
         <tr>
-           <td><label>Username:</label> </td>
+           <td><label>Username</label> </td>
             <td><input type="text" name="username" class="labcol" required></td>
         </tr>
         <tr>
-           <td> <label>Password:</label></td>
+           <td> <label>Password</label></td>
             <td><input type="password" name="password" class="labcol" required></td>
         </tr>
         <tr>
@@ -69,7 +90,8 @@
         <td><button id="al1" type="submit" class="labcol">Login</button></td>
         <td><button id="al2" type="reset" class="labcol">Reset</button></td>
         </tr>
+        </table>
     </form>
-</table>
+</div>
 </body>
 </html>
